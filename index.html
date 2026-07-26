@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Earth Viewer — Phase 0</title>
-    <script type="module" crossorigin src="/EarthViz-demo/assets/index-BFNgTMAw.js"></script>
+    <script type="module" crossorigin src="/EarthViz-demo/assets/index-BDUjtB2u.js"></script>
     <link rel="stylesheet" crossorigin href="/EarthViz-demo/assets/index-Ba4UcoD_.css">
   </head>
   <body>
@@ -16,6 +16,7 @@
         <span>Imagery</span>
         <select id="layerSelect"></select>
       </label>
+      <div id="blendStatus" class="hint"></div>
       <label class="row">
         <span>Satellites</span>
         <select id="satGroupSelect">
@@ -26,6 +27,7 @@
       </label>
       <div class="row">
         <span>Overlays</span>
+        <label class="check"><input type="checkbox" id="ovNightLights" /> Night lights</label>
         <label class="check"><input type="checkbox" id="ovSnowCover" /> Snow</label>
         <label class="check"><input type="checkbox" id="ovSeaIce" /> Sea ice</label>
       </div>
