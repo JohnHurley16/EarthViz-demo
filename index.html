@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Earth Viewer — Phase 0</title>
+    <script type="module" crossorigin src="/EarthViz-demo/assets/index-CDk70BDK.js"></script>
+    <link rel="stylesheet" crossorigin href="/EarthViz-demo/assets/index-CbM9efoQ.css">
+  </head>
+  <body>
+    <div id="cesiumContainer"></div>
+
+    <div id="controlPanel" class="panel">
+      <h1>Earth Viewer</h1>
+      <label class="row">
+        <span>Imagery</span>
+        <select id="layerSelect"></select>
+      </label>
+      <label class="row">
+        <span>Satellites</span>
+        <select id="satGroupSelect">
+          <option value="stations" selected>Stations (ISS, CSS…)</option>
+          <option value="weather">Weather satellites</option>
+          <option value="none">Hidden</option>
+        </select>
+      </label>
+      <div class="row" id="cameraPresets"></div>
+      <div id="satStatus" class="hint"></div>
+      <div id="terrainStatus" class="hint"></div>
+    </div>
+
+    <div id="timeBar" class="panel">
+      <button id="dayPrev" title="Previous day">◀</button>
+      <input type="range" id="timeSlider" />
+      <button id="dayNext" title="Next day">▶</button>
+      <button id="dayToday" title="Jump to most recent imagery">Today</button>
+      <span id="timeLabel"></span>
+    </div>
+
+    <div id="credits" class="hint">
+      Imagery: NASA GIBS / Worldview · GOES: NOAA · Orbits: CelesTrak · Engine: CesiumJS
+    </div>
+
+  </body>
+</html>
