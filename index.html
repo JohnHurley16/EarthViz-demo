@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Earth Viewer — Phase 0</title>
-    <script type="module" crossorigin src="/EarthViz-demo/assets/index-BDUjtB2u.js"></script>
-    <link rel="stylesheet" crossorigin href="/EarthViz-demo/assets/index-Ba4UcoD_.css">
+    <script type="module" crossorigin src="/EarthViz-demo/assets/index-DZ3HqODZ.js"></script>
+    <link rel="stylesheet" crossorigin href="/EarthViz-demo/assets/index-CGdmdLTS.css">
   </head>
   <body>
     <div id="cesiumContainer"></div>
@@ -36,6 +36,11 @@
         <label class="check"><input type="checkbox" id="terminatorToggle" /> Day/night terminator</label>
       </div>
       <div class="row" id="cameraPresets"></div>
+      <div class="row">
+        <span>Share</span>
+        <button id="copyLink" title="Copy a permalink reproducing this exact view">Copy link</button>
+        <span id="copyStatus" class="hint"></span>
+      </div>
       <div id="satStatus" class="hint"></div>
       <div id="terrainStatus" class="hint"></div>
     </div>
@@ -49,11 +54,21 @@
     </div>
 
     <div id="timeBar" class="panel">
-      <button id="dayPrev" title="Previous day">◀</button>
-      <input type="range" id="timeSlider" />
-      <button id="dayNext" title="Next day">▶</button>
-      <button id="dayToday" title="Jump to most recent imagery">Today</button>
-      <span id="timeLabel"></span>
+      <div class="time-controls">
+        <button id="playPause" title="Play / pause the simulation clock">⏸</button>
+        <select id="rateSelect" title="Animation mode / rate">
+          <option value="1" selected>Real time</option>
+          <option value="86400">1 day/s</option>
+          <option value="604800">1 week/s</option>
+          <option value="loop">GOES loop (last 3 h)</option>
+        </select>
+        <button id="dayPrev" title="Previous day">◀</button>
+        <input type="range" id="timeSlider" />
+        <button id="dayNext" title="Next day">▶</button>
+        <button id="dayToday" title="Jump to most recent imagery">Today</button>
+        <span id="timeLabel"></span>
+      </div>
+      <div id="animStatus" class="hint"></div>
     </div>
 
     <div id="credits" class="hint">
