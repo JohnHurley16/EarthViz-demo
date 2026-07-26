@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Earth Viewer — Phase 0</title>
-    <script type="module" crossorigin src="/EarthViz-demo/assets/index-CDk70BDK.js"></script>
-    <link rel="stylesheet" crossorigin href="/EarthViz-demo/assets/index-CbM9efoQ.css">
+    <script type="module" crossorigin src="/EarthViz-demo/assets/index-BFNgTMAw.js"></script>
+    <link rel="stylesheet" crossorigin href="/EarthViz-demo/assets/index-Ba4UcoD_.css">
   </head>
   <body>
     <div id="cesiumContainer"></div>
@@ -24,9 +24,26 @@
           <option value="none">Hidden</option>
         </select>
       </label>
+      <div class="row">
+        <span>Overlays</span>
+        <label class="check"><input type="checkbox" id="ovSnowCover" /> Snow</label>
+        <label class="check"><input type="checkbox" id="ovSeaIce" /> Sea ice</label>
+      </div>
+      <div class="row">
+        <span>Sun</span>
+        <label class="check"><input type="checkbox" id="terminatorToggle" /> Day/night terminator</label>
+      </div>
       <div class="row" id="cameraPresets"></div>
       <div id="satStatus" class="hint"></div>
       <div id="terrainStatus" class="hint"></div>
+    </div>
+
+    <div id="provPanel" class="panel">
+      <button id="provToggle" class="prov-toggle">Provenance ▸</button>
+      <div id="provBody" class="collapsed">
+        <div class="hint">Click the globe to inspect the tile under the cursor.</div>
+        <div id="provContent"></div>
+      </div>
     </div>
 
     <div id="timeBar" class="panel">
